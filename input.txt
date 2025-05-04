@@ -1,0 +1,35 @@
+
+def foo(par1 int:x; par2 int:y; par3 int:z; par4 real:f):
+begin
+if x > y:
+begin
+x = x + y;
+end
+else:
+begin
+y = x + y + z;
+z = y * 2;
+f = z;
+end
+end
+
+def goo(): returns char
+begin
+return 'a';
+end
+
+def _main_():
+var
+    int:x;
+    int:y;
+    int:z;
+    real:f;
+    char:c;
+begin
+x = 1;
+y = 2;
+z = 3;
+f = 0;
+call foo(x, y, z, f);
+c = goo();
+end
